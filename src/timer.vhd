@@ -34,24 +34,52 @@ architecture rtl of timer is
 
   -- Register holding the number of elapsed clock cycles
   signal count_r : natural := 0;
+  type state_type is (IDLE, COUNT, DONE);
+  signal state : state_type := IDLE;
 
-begin
-
-  ---------------------------------------------------------------------------
-  -- Clocked process (timer behaviour to be implemented later)
-  ---------------------------------------------------------------------------
+  begin
   process (clk_i)
   begin
     if rising_edge(clk_i) then
-      if arst_i = '1' then  -- When the reset signal is high
-        count_r <= 0;       -- Reset the internal counter
-        done_o  <= '1';     -- The system is not counting, so set done_o to high
+      if arst_i = '1' then
+        state   <= IDLE;
+        count_r <= 0;
+        done_o  <= '1';
       else
-        -- Placeholder behaviour
-        done_o <= '1';
+        -- Default assignments (stay in current state)
+        state  <= state;
+        done_o <= done_o;
+        count_r <= count_r;
+
+        case state is
+
+          when IDLE =>
+            done_o <= '1';
+            count_r <= 0;
+            if start_i = '1' then
+              state <= COUNT;
+            end if;
+
+          when COUNT =>
+            done_o <= '0';
+            if count_r = delay_cycles_c - 1 then
+              state <= DONE;
+            else
+              count_r <= count_r + 1;
+            end if;
+            
+
+          when DONE =>
+            done_o <= '1';
+            if start_i = '0' then
+              state <= IDLE;
+            end if;
+
+        end case;
       end if;
     end if;
   end process;
+
 
   ---------------------------------------------------------------------------
   -- Optional Debugging - Verification of delay_cycles_c
