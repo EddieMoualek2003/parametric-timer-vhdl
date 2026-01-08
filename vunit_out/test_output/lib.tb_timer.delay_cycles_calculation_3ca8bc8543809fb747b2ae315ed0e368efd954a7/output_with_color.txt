@@ -1,2 +1,2 @@
-/home/linuxos/Documents/cern_application/parametric-timer-vhdl/src/timer.vhd:90:5:@0ms:(assertion note): delay_cycles_c = 10000000
-simulation stopped @0ms with status 0
+/home/linuxos/Documents/cern_application/parametric-timer-vhdl/src/timer.vhd:90:5:@0ms:(assertion note): delay_cycles_c = 5
+simulation stopped @1095ns with status 0

@@ -6,8 +6,7 @@ use ieee.math_real.all;
 entity timer is
   generic (
     clk_freq_hz_g   : natural;
-    delay_g         : time;
-    expose_cycles_g : boolean := true
+    delay_g         : time
   );
   port (
     clk_i   : in  std_ulogic;
@@ -24,6 +23,7 @@ architecture rtl of timer is
   -- Calculated as ceil(delay_g * clk_freq_hz_g).
   -- This ensures the timer does not expire earlier than the requested delay.
   ---------------------------------------------------------------------------
+  constant expose_cycles_g : boolean := true;
   constant delay_cycles_c : natural :=
     natural(
       ceil(real(clk_freq_hz_g) * real(delay_g / 1 ns) * 1.0e-9)
@@ -58,19 +58,19 @@ architecture rtl of timer is
             count_r <= 0;
             if start_i = '1' then
               state <= COUNT;
+              done_o <= '0';
             end if;
 
           when COUNT =>
-            done_o <= '0';
             if count_r = delay_cycles_c - 1 then
               state <= DONE;
+              done_o <= '1';
             else
               count_r <= count_r + 1;
             end if;
             
 
           when DONE =>
-            done_o <= '1';
             if start_i = '0' then
               state <= IDLE;
             end if;
