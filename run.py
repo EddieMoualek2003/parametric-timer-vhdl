@@ -1,8 +1,17 @@
-# This will serve as a minimal VUnit runner stub.
 from vunit import VUnit
 
-# Module install verification
-print(vunit.__version__)
+# Create VUnit instance (disable deprecated builtin auto-compile)
+vu = VUnit.from_argv(compile_builtins=False)
 
-vu = VUnit.from_argv()
+# Explicitly add VHDL builtins
+vu.add_vhdl_builtins()
+
+# Create library
+lib = vu.add_library("lib")
+
+# Add RTL and testbench source files
+lib.add_source_files("src/*.vhd")
+lib.add_source_files("tb/*.vhd")
+
+# Run all tests
 vu.main()
