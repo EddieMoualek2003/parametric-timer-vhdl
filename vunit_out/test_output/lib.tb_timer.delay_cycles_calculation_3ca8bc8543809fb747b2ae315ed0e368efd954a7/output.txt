@@ -1,7 +1,2 @@
 /home/linuxos/Documents/cern_application/parametric-timer-vhdl/src/timer.vhd:90:5:@0ms:(assertion note): delay_cycles_c = 5
-        95000000 fs - check                -   ERROR - done_o should go high after delay - Got 1. Expected 0.
-/home/linuxos/.local/lib/python3.10/site-packages/vunit/vhdl/core/src/core_pkg.vhd:84:7:@95ns:(report failure): Stop simulation on log level error
-/usr/bin/ghdl-mcode:error: report failed
-in process .tb_timer(tb).test_proc
-  from: vunit_lib.core_pkg.core_failure at core_pkg.vhd:84
-/usr/bin/ghdl-mcode:error: simulation failed
+simulation stopped @1095ns with status 0
