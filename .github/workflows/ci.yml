@@ -28,5 +28,8 @@ jobs:
           pip install vunit_hdl
 
       - name: Run VUnit tests
+        env:
+          VUNIT_GHDL_BACKEND: mcode
         run: |
           python3 run.py
+
