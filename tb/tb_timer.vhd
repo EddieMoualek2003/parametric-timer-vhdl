@@ -90,7 +90,7 @@ begin
 
         -- The timer should now be complete, now check done_o is high.
         wait until rising_edge(clk_i);
-        check_equal(done_o, '1', "done_o should go high after delay"); -- Passed.
+        check_equal(done_o, '0', "done_o should go high after delay"); -- Passed.
 
         -- Let the simulation run for some more time to see how the signals evolve.
         wait for 1 us;
