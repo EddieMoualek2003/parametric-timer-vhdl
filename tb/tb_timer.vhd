@@ -18,7 +18,7 @@ architecture tb of tb_timer is
   -- Test parameters
   ---------------------------------------------------------------------------
   constant clk_freq_hz_g : natural := 100_000_000; -- 100 MHz
-  constant delay_g       : time    := 50 ns; -- Example test case from document
+  constant delay_g       : time    := 30 ns; -- Example test case from document
   -- This implements the same conversion logic as the timer module - it is repeated here
   -- as part of the verification.
   constant delay_cycles_c : natural :=
