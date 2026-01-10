@@ -73,9 +73,12 @@ begin
         wait for 10 ns;
 
         -- Start the timer
+        wait for 20 ns;
         start_i <= '1';
         wait for 10 ns;
         start_i <= '0';
+        wait for 10 ns;
+        start_i <= '1';
 
         -- Test synchronisation since all effects happen on the rising clock edge.
         wait until rising_edge(clk_i);

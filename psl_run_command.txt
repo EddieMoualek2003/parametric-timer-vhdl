@@ -1,0 +1,7 @@
+rm -f *.o *.cf work-obj*.cf wave.ghw && \
+ghdl -a --std=08 -fpsl src/timer.vhd && \
+ghdl -a --std=08 -fpsl src/timer_psl_top.vhd && \
+ghdl -e --std=08 -fpsl timer_psl_top && \
+ghdl -r --std=08 -fpsl timer_psl_top --assert-level=error --stop-time=500ns --wave=wave.ghw && \
+echo "PASS (waveform: wave.ghw)" || \
+echo "FAIL (see PSL error above; waveform: wave.ghw)"
