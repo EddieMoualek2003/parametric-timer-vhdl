@@ -1,0 +1,21 @@
+initial
+assume (= [dut.$auto$ghdl.cc:825:import_module$20] #b01)
+assume (= [dut.$auto$ghdl.cc:825:import_module$26] #b0001)
+assume (= [dut.$auto$ghdl.cc:825:import_module$38] #b00000001)
+assume (= [dut._witness_.anyinit__112] false)
+assume (= [dut._witness_.anyinit__114] false)
+assume (= [dut._witness_.anyinit__126] false)
+assume (= [dut._witness_.anyinit__129] false)
+assume (= [dut.count_r] #b0000000000000000000000000000000)
+assume (= [dut.done_o] false)
+assume (= [dut.state] #b00)
+
+state 0
+assume (= [arst_i] true)
+assume (= [clk_i] false)
+assume (= [start_i] false)
+
+state 1
+assume (= [arst_i] false)
+assume (= [clk_i] false)
+assume (= [start_i] false)

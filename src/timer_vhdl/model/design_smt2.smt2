@@ -41,21 +41,21 @@
 ; yosys-smt2-register _witness_.anyinit__129 1
 ; yosys-smt2-wire _witness_.anyinit__129 1
 (define-fun |timer_Brtl_100000000_50000000_n _witness_.anyinit__129| ((state |timer_Brtl_100000000_50000000_s|)) Bool (= ((_ extract 0 0) (|timer_Brtl_100000000_50000000#9| state)) #b1))
-; yosys-smt2-anyseq timer_Brtl_100000000_50000000#10 1 $auto$setundef.cc:533:execute$83
-; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyseq_auto_setundef_cc_533_execute_83"], "smtname": 10, "smtoffset": 0, "type": "seq", "width": 1}
-(declare-fun |timer_Brtl_100000000_50000000#10| (|timer_Brtl_100000000_50000000_s|) (_ BitVec 1)) ; \_witness_.anyseq_auto_setundef_cc_533_execute_83
-; yosys-smt2-wire _witness_.anyseq_auto_setundef_cc_533_execute_83 1
-(define-fun |timer_Brtl_100000000_50000000_n _witness_.anyseq_auto_setundef_cc_533_execute_83| ((state |timer_Brtl_100000000_50000000_s|)) Bool (= ((_ extract 0 0) (|timer_Brtl_100000000_50000000#10| state)) #b1))
-; yosys-smt2-anyseq timer_Brtl_100000000_50000000#11 31 $auto$setundef.cc:533:execute$85
-; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyseq_auto_setundef_cc_533_execute_85"], "smtname": 11, "smtoffset": 0, "type": "seq", "width": 31}
-(declare-fun |timer_Brtl_100000000_50000000#11| (|timer_Brtl_100000000_50000000_s|) (_ BitVec 31)) ; \_witness_.anyseq_auto_setundef_cc_533_execute_85
-; yosys-smt2-wire _witness_.anyseq_auto_setundef_cc_533_execute_85 31
-(define-fun |timer_Brtl_100000000_50000000_n _witness_.anyseq_auto_setundef_cc_533_execute_85| ((state |timer_Brtl_100000000_50000000_s|)) (_ BitVec 31) (|timer_Brtl_100000000_50000000#11| state))
-; yosys-smt2-anyseq timer_Brtl_100000000_50000000#12 2 $auto$setundef.cc:533:execute$87
-; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyseq_auto_setundef_cc_533_execute_87"], "smtname": 12, "smtoffset": 0, "type": "seq", "width": 2}
-(declare-fun |timer_Brtl_100000000_50000000#12| (|timer_Brtl_100000000_50000000_s|) (_ BitVec 2)) ; \_witness_.anyseq_auto_setundef_cc_533_execute_87
-; yosys-smt2-wire _witness_.anyseq_auto_setundef_cc_533_execute_87 2
-(define-fun |timer_Brtl_100000000_50000000_n _witness_.anyseq_auto_setundef_cc_533_execute_87| ((state |timer_Brtl_100000000_50000000_s|)) (_ BitVec 2) (|timer_Brtl_100000000_50000000#12| state))
+; yosys-smt2-anyseq timer_Brtl_100000000_50000000#10 1 $auto$setundef.cc:533:execute$85
+; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyseq_auto_setundef_cc_533_execute_85"], "smtname": 10, "smtoffset": 0, "type": "seq", "width": 1}
+(declare-fun |timer_Brtl_100000000_50000000#10| (|timer_Brtl_100000000_50000000_s|) (_ BitVec 1)) ; \_witness_.anyseq_auto_setundef_cc_533_execute_85
+; yosys-smt2-wire _witness_.anyseq_auto_setundef_cc_533_execute_85 1
+(define-fun |timer_Brtl_100000000_50000000_n _witness_.anyseq_auto_setundef_cc_533_execute_85| ((state |timer_Brtl_100000000_50000000_s|)) Bool (= ((_ extract 0 0) (|timer_Brtl_100000000_50000000#10| state)) #b1))
+; yosys-smt2-anyseq timer_Brtl_100000000_50000000#11 31 $auto$setundef.cc:533:execute$87
+; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyseq_auto_setundef_cc_533_execute_87"], "smtname": 11, "smtoffset": 0, "type": "seq", "width": 31}
+(declare-fun |timer_Brtl_100000000_50000000#11| (|timer_Brtl_100000000_50000000_s|) (_ BitVec 31)) ; \_witness_.anyseq_auto_setundef_cc_533_execute_87
+; yosys-smt2-wire _witness_.anyseq_auto_setundef_cc_533_execute_87 31
+(define-fun |timer_Brtl_100000000_50000000_n _witness_.anyseq_auto_setundef_cc_533_execute_87| ((state |timer_Brtl_100000000_50000000_s|)) (_ BitVec 31) (|timer_Brtl_100000000_50000000#11| state))
+; yosys-smt2-anyseq timer_Brtl_100000000_50000000#12 2 $auto$setundef.cc:533:execute$89
+; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyseq_auto_setundef_cc_533_execute_89"], "smtname": 12, "smtoffset": 0, "type": "seq", "width": 2}
+(declare-fun |timer_Brtl_100000000_50000000#12| (|timer_Brtl_100000000_50000000_s|) (_ BitVec 2)) ; \_witness_.anyseq_auto_setundef_cc_533_execute_89
+; yosys-smt2-wire _witness_.anyseq_auto_setundef_cc_533_execute_89 2
+(define-fun |timer_Brtl_100000000_50000000_n _witness_.anyseq_auto_setundef_cc_533_execute_89| ((state |timer_Brtl_100000000_50000000_s|)) (_ BitVec 2) (|timer_Brtl_100000000_50000000#12| state))
 (declare-fun |timer_Brtl_100000000_50000000#13| (|timer_Brtl_100000000_50000000_s|) Bool) ; \arst_i
 ; yosys-smt2-input arst_i 1
 ; yosys-smt2-wire arst_i 1
@@ -73,7 +73,7 @@
 ; yosys-smt2-register count_r 31
 ; yosys-smt2-wire count_r 31
 (define-fun |timer_Brtl_100000000_50000000_n count_r| ((state |timer_Brtl_100000000_50000000_s|)) (_ BitVec 31) (|timer_Brtl_100000000_50000000#15| state))
-; yosys-smt2-anyinit timer_Brtl_100000000_50000000#16 1 :154
+; yosys-smt2-anyinit timer_Brtl_100000000_50000000#16 1 :165
 ; yosys-smt2-witness {"offset": 0, "path": ["\\done_o"], "smtname": 16, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |timer_Brtl_100000000_50000000#16| (|timer_Brtl_100000000_50000000_s|) (_ BitVec 1)) ; \done_o
 ; yosys-smt2-output done_o 1
@@ -90,20 +90,22 @@
 ; yosys-smt2-register state 2
 ; yosys-smt2-wire state 2
 (define-fun |timer_Brtl_100000000_50000000_n state| ((state |timer_Brtl_100000000_50000000_s|)) (_ BitVec 2) (|timer_Brtl_100000000_50000000#18| state))
-(define-fun |timer_Brtl_100000000_50000000#19| ((state |timer_Brtl_100000000_50000000_s|)) (_ BitVec 1) (bvnot (ite (|timer_Brtl_100000000_50000000#14| state) #b1 #b0))) ; $auto$rtlil.cc:3329:Not$92
-; yosys-smt2-assume 0 $auto$formalff.cc:987:execute$93
-(define-fun |timer_Brtl_100000000_50000000_u 0| ((state |timer_Brtl_100000000_50000000_s|)) Bool (or (= ((_ extract 0 0) (|timer_Brtl_100000000_50000000#19| state)) #b1) (not true))) ; $auto$formalff.cc:987:execute$93
+(define-fun |timer_Brtl_100000000_50000000#19| ((state |timer_Brtl_100000000_50000000_s|)) (_ BitVec 1) (bvnot (ite (|timer_Brtl_100000000_50000000#14| state) #b1 #b0))) ; $auto$rtlil.cc:3329:Not$94
+; yosys-smt2-assume 0 $auto$formalff.cc:987:execute$95
+(define-fun |timer_Brtl_100000000_50000000_u 0| ((state |timer_Brtl_100000000_50000000_s|)) Bool (or (= ((_ extract 0 0) (|timer_Brtl_100000000_50000000#19| state)) #b1) (not true))) ; $auto$formalff.cc:987:execute$95
+; yosys-smt2-assert 0 :164
+(define-fun |timer_Brtl_100000000_50000000_a 0| ((state |timer_Brtl_100000000_50000000_s|)) Bool (or (|timer_Brtl_100000000_50000000#13| state) (not true))) ; :164
 (define-fun |timer_Brtl_100000000_50000000#20| ((state |timer_Brtl_100000000_50000000_s|)) (_ BitVec 1) (bvnot (ite (|timer_Brtl_100000000_50000000#13| state) #b1 #b0))) ; $auto$ghdl.cc:825:import_module$21
 (define-fun |timer_Brtl_100000000_50000000#21| ((state |timer_Brtl_100000000_50000000_s|)) (_ BitVec 1) (bvnot (|timer_Brtl_100000000_50000000#16| state))) ; $auto$ghdl.cc:825:import_module$35
 (define-fun |timer_Brtl_100000000_50000000#22| ((state |timer_Brtl_100000000_50000000_s|)) (_ BitVec 1) (bvand (|timer_Brtl_100000000_50000000#20| state) (|timer_Brtl_100000000_50000000#21| state))) ; $auto$ghdl.cc:825:import_module$43
 (define-fun |timer_Brtl_100000000_50000000#23| ((state |timer_Brtl_100000000_50000000_s|)) (_ BitVec 1) (bvand ((_ extract 5 5) (|timer_Brtl_100000000_50000000#4| state)) (|timer_Brtl_100000000_50000000#22| state))) ; $auto$ghdl.cc:825:import_module$66
 (define-fun |timer_Brtl_100000000_50000000#24| ((state |timer_Brtl_100000000_50000000_s|)) (_ BitVec 1) (bvnot (|timer_Brtl_100000000_50000000#23| state))) ; $auto$ghdl.cc:825:import_module$67
-; yosys-smt2-assert 0 i_timer.assert_done_timing
-(define-fun |timer_Brtl_100000000_50000000_a 0| ((state |timer_Brtl_100000000_50000000_s|)) Bool (or (= ((_ extract 0 0) (|timer_Brtl_100000000_50000000#24| state)) #b1) (not true))) ; i_timer.assert_done_timing
+; yosys-smt2-assert 1 i_timer.assert_done_timing
+(define-fun |timer_Brtl_100000000_50000000_a 1| ((state |timer_Brtl_100000000_50000000_s|)) Bool (or (= ((_ extract 0 0) (|timer_Brtl_100000000_50000000#24| state)) #b1) (not true))) ; i_timer.assert_done_timing
 (define-fun |timer_Brtl_100000000_50000000#25| ((state |timer_Brtl_100000000_50000000_s|)) (_ BitVec 1) (bvand (|timer_Brtl_100000000_50000000#2| state) (|timer_Brtl_100000000_50000000#21| state))) ; $auto$ghdl.cc:825:import_module$36
 (define-fun |timer_Brtl_100000000_50000000#26| ((state |timer_Brtl_100000000_50000000_s|)) (_ BitVec 1) (bvnot (|timer_Brtl_100000000_50000000#25| state))) ; $auto$ghdl.cc:825:import_module$37
-; yosys-smt2-assert 1 i_timer.assert_stable_idle
-(define-fun |timer_Brtl_100000000_50000000_a 1| ((state |timer_Brtl_100000000_50000000_s|)) Bool (or (= ((_ extract 0 0) (|timer_Brtl_100000000_50000000#26| state)) #b1) (not true))) ; i_timer.assert_stable_idle
+; yosys-smt2-assert 2 i_timer.assert_stable_idle
+(define-fun |timer_Brtl_100000000_50000000_a 2| ((state |timer_Brtl_100000000_50000000_s|)) Bool (or (= ((_ extract 0 0) (|timer_Brtl_100000000_50000000#26| state)) #b1) (not true))) ; i_timer.assert_stable_idle
 (define-fun |timer_Brtl_100000000_50000000#27| ((state |timer_Brtl_100000000_50000000_s|)) (_ BitVec 1) (bvand (|timer_Brtl_100000000_50000000#0| state) (|timer_Brtl_100000000_50000000#20| state))) ; $auto$ghdl.cc:825:import_module$22
 (define-fun |timer_Brtl_100000000_50000000#28| ((state |timer_Brtl_100000000_50000000_s|)) (_ BitVec 1) (bvnot (|timer_Brtl_100000000_50000000#27| state))) ; $auto$ghdl.cc:825:import_module$23
 ; yosys-smt2-assume 1 i_timer.assume_reset_initial
@@ -124,7 +126,7 @@
 (define-fun |timer_Brtl_100000000_50000000#40| ((state |timer_Brtl_100000000_50000000_s|)) (_ BitVec 1) (ite (|timer_Brtl_100000000_50000000#35| state) (|timer_Brtl_100000000_50000000#16| state) (ite (|timer_Brtl_100000000_50000000#34| state) (|timer_Brtl_100000000_50000000#39| state) (ite (|timer_Brtl_100000000_50000000#33| state) (|timer_Brtl_100000000_50000000#38| state) (|timer_Brtl_100000000_50000000#10| state))))) ; $auto$ghdl.cc:825:import_module$14
 (define-fun |timer_Brtl_100000000_50000000#41| ((state |timer_Brtl_100000000_50000000_s|)) (_ BitVec 1) (ite (|timer_Brtl_100000000_50000000#13| state) #b1 (|timer_Brtl_100000000_50000000#40| state))) ; $auto$ghdl.cc:825:import_module$17
 (define-fun |timer_Brtl_100000000_50000000#42| ((state |timer_Brtl_100000000_50000000_s|)) (_ BitVec 31) (bvadd (|timer_Brtl_100000000_50000000#15| state) #b0000000000000000000000000000001)) ; $auto$ghdl.cc:825:import_module$6
-(define-fun |timer_Brtl_100000000_50000000#43| ((state |timer_Brtl_100000000_50000000_s|)) (_ BitVec 31) (ite (|timer_Brtl_100000000_50000000#30| state) (|timer_Brtl_100000000_50000000#15| state) (|timer_Brtl_100000000_50000000#42| state))) ; { $auto$wreduce.cc:514:run$72 [30:16] $auto$ghdl.cc:825:import_module$8 }
+(define-fun |timer_Brtl_100000000_50000000#43| ((state |timer_Brtl_100000000_50000000_s|)) (_ BitVec 31) (ite (|timer_Brtl_100000000_50000000#30| state) (|timer_Brtl_100000000_50000000#15| state) (|timer_Brtl_100000000_50000000#42| state))) ; { $auto$wreduce.cc:514:run$74 [30:16] $auto$ghdl.cc:825:import_module$8 }
 (define-fun |timer_Brtl_100000000_50000000#44| ((state |timer_Brtl_100000000_50000000_s|)) (_ BitVec 31) (ite (|timer_Brtl_100000000_50000000#35| state) (|timer_Brtl_100000000_50000000#15| state) (ite (|timer_Brtl_100000000_50000000#34| state) (|timer_Brtl_100000000_50000000#43| state) (ite (|timer_Brtl_100000000_50000000#33| state) #b0000000000000000000000000000000 (|timer_Brtl_100000000_50000000#11| state))))) ; $auto$ghdl.cc:825:import_module$15
 (define-fun |timer_Brtl_100000000_50000000#45| ((state |timer_Brtl_100000000_50000000_s|)) (_ BitVec 31) (ite (|timer_Brtl_100000000_50000000#13| state) #b0000000000000000000000000000000 (|timer_Brtl_100000000_50000000#44| state))) ; $auto$ghdl.cc:825:import_module$18
 (define-fun |timer_Brtl_100000000_50000000#46| ((state |timer_Brtl_100000000_50000000_s|)) (_ BitVec 1) (bvand (|timer_Brtl_100000000_50000000#7| state) (|timer_Brtl_100000000_50000000#22| state))) ; $auto$ghdl.cc:825:import_module$44
@@ -142,6 +144,7 @@
 (define-fun |timer_Brtl_100000000_50000000_a| ((state |timer_Brtl_100000000_50000000_s|)) Bool (and
   (|timer_Brtl_100000000_50000000_a 0| state)
   (|timer_Brtl_100000000_50000000_a 1| state)
+  (|timer_Brtl_100000000_50000000_a 2| state)
 ))
 (define-fun |timer_Brtl_100000000_50000000_u| ((state |timer_Brtl_100000000_50000000_s|)) Bool (and
   (|timer_Brtl_100000000_50000000_u 0| state)
@@ -157,15 +160,15 @@
 ))
 (define-fun |timer_Brtl_100000000_50000000_h| ((state |timer_Brtl_100000000_50000000_s|)) Bool true)
 (define-fun |timer_Brtl_100000000_50000000_t| ((state |timer_Brtl_100000000_50000000_s|) (next_state |timer_Brtl_100000000_50000000_s|)) Bool (and
-  (= (|timer_Brtl_100000000_50000000#37| state) (|timer_Brtl_100000000_50000000#18| next_state)) ; :156 \state
-  (= (|timer_Brtl_100000000_50000000#41| state) (|timer_Brtl_100000000_50000000#16| next_state)) ; :154 \done_o
-  (= (|timer_Brtl_100000000_50000000#45| state) (|timer_Brtl_100000000_50000000#15| next_state)) ; :155 \count_r
+  (= (|timer_Brtl_100000000_50000000#37| state) (|timer_Brtl_100000000_50000000#18| next_state)) ; :167 \state
+  (= (|timer_Brtl_100000000_50000000#41| state) (|timer_Brtl_100000000_50000000#16| next_state)) ; :165 \done_o
+  (= (|timer_Brtl_100000000_50000000#45| state) (|timer_Brtl_100000000_50000000#15| next_state)) ; :166 \count_r
   (= (ite (|timer_Brtl_100000000_50000000#17| state) #b1 #b0) (|timer_Brtl_100000000_50000000#9| next_state)) ; :129 \_witness_.anyinit__129
   (= (|timer_Brtl_100000000_50000000#16| state) (|timer_Brtl_100000000_50000000#8| next_state)) ; :126 \_witness_.anyinit__126
   (= (|timer_Brtl_100000000_50000000#16| state) (|timer_Brtl_100000000_50000000#7| next_state)) ; :114 \_witness_.anyinit__114
   (= (ite (|timer_Brtl_100000000_50000000#17| state) #b1 #b0) (|timer_Brtl_100000000_50000000#6| next_state)) ; :112 \_witness_.anyinit__112
-  (= (concat (|timer_Brtl_100000000_50000000#54| state) (concat (|timer_Brtl_100000000_50000000#53| state) (concat (|timer_Brtl_100000000_50000000#52| state) (concat (|timer_Brtl_100000000_50000000#51| state) (concat (|timer_Brtl_100000000_50000000#50| state) (|timer_Brtl_100000000_50000000#47| state)))))) (|timer_Brtl_100000000_50000000#4| next_state)) ; $auto$ff.cc:337:slice$89 $auto$ghdl.cc:825:import_module$38 [6:1]
-  (= (|timer_Brtl_100000000_50000000#57| state) (|timer_Brtl_100000000_50000000#2| next_state)) ; $auto$ff.cc:337:slice$90 $auto$ghdl.cc:825:import_module$26 [2]
+  (= (concat (|timer_Brtl_100000000_50000000#54| state) (concat (|timer_Brtl_100000000_50000000#53| state) (concat (|timer_Brtl_100000000_50000000#52| state) (concat (|timer_Brtl_100000000_50000000#51| state) (concat (|timer_Brtl_100000000_50000000#50| state) (|timer_Brtl_100000000_50000000#47| state)))))) (|timer_Brtl_100000000_50000000#4| next_state)) ; $auto$ff.cc:337:slice$91 $auto$ghdl.cc:825:import_module$38 [6:1]
+  (= (|timer_Brtl_100000000_50000000#57| state) (|timer_Brtl_100000000_50000000#2| next_state)) ; $auto$ff.cc:337:slice$92 $auto$ghdl.cc:825:import_module$26 [2]
   (= #b0 (|timer_Brtl_100000000_50000000#0| next_state)) ; :55 $auto$ghdl.cc:825:import_module$20 [0]
 )) ; end of module timer_Brtl_100000000_50000000
 ; yosys-smt2-module timer_wrapper
@@ -195,9 +198,9 @@
 ; yosys-smt2-wire start_i 1
 ; yosys-smt2-witness {"offset": 0, "path": ["\\start_i"], "smtname": "start_i", "smtoffset": 0, "type": "input", "width": 1}
 (define-fun |timer_wrapper_n start_i| ((state |timer_wrapper_s|)) Bool (|timer_wrapper#3| state))
-(define-fun |timer_wrapper#4| ((state |timer_wrapper_s|)) (_ BitVec 1) (bvnot (ite (|timer_wrapper#1| state) #b1 #b0))) ; $auto$rtlil.cc:3329:Not$95
-; yosys-smt2-assume 0 $auto$formalff.cc:987:execute$96
-(define-fun |timer_wrapper_u 0| ((state |timer_wrapper_s|)) Bool (or (= ((_ extract 0 0) (|timer_wrapper#4| state)) #b1) (not true))) ; $auto$formalff.cc:987:execute$96
+(define-fun |timer_wrapper#4| ((state |timer_wrapper_s|)) (_ BitVec 1) (bvnot (ite (|timer_wrapper#1| state) #b1 #b0))) ; $auto$rtlil.cc:3329:Not$97
+; yosys-smt2-assume 0 $auto$formalff.cc:987:execute$98
+(define-fun |timer_wrapper_u 0| ((state |timer_wrapper_s|)) Bool (or (= ((_ extract 0 0) (|timer_wrapper#4| state)) #b1) (not true))) ; $auto$formalff.cc:987:execute$98
 (define-fun |timer_wrapper_a| ((state |timer_wrapper_s|)) Bool 
   (|timer_Brtl_100000000_50000000_a| (|timer_wrapper_h dut| state))
 )

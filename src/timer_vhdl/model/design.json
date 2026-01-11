@@ -171,41 +171,6 @@
             ]
           },
           {
-            "type": "$assert",
-            "ports": [
-                {
-                  "name": "A",
-                  "direction": "io",
-                  "range": [0, 0]
-                },
-                {
-                  "name": "EN",
-                  "direction": "io",
-                  "range": [0, 0]
-                }
-            ],
-            "cells": [
-                {
-                  "name": "i_timer.assert_done_timing",
-                  "attributes": {
-
-                  },
-                  "parameters": {
-
-                  }
-                },
-                {
-                  "name": "i_timer.assert_stable_idle",
-                  "attributes": {
-
-                  },
-                  "parameters": {
-
-                  }
-                }
-            ]
-          },
-          {
             "type": "$eq",
             "ports": [
                 {
@@ -262,6 +227,50 @@
                     "B_SIGNED": "00000000000000000000000000000000",
                     "B_WIDTH": "00000000000000000000000000000010",
                     "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$assert",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "EN",
+                  "direction": "io",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": ":164",
+                  "attributes": {
+
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "i_timer.assert_done_timing",
+                  "attributes": {
+
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "i_timer.assert_stable_idle",
+                  "attributes": {
+
+                  },
+                  "parameters": {
+
                   }
                 }
             ]
@@ -365,7 +374,7 @@
                   }
                 },
                 {
-                  "name": ":154",
+                  "name": ":165",
                   "attributes": {
 
                   },
@@ -375,7 +384,7 @@
                   }
                 },
                 {
-                  "name": ":155",
+                  "name": ":166",
                   "attributes": {
 
                   },
@@ -385,7 +394,7 @@
                   }
                 },
                 {
-                  "name": ":156",
+                  "name": ":167",
                   "attributes": {
 
                   },

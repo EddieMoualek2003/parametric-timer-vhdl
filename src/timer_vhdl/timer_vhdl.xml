@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-<testsuite timestamp="2026-01-11T02:33:28" hostname="ubuntu22" package="timer_vhdl" id="0" name="default" tests="4" errors="0" failures="0" time="0" skipped="2">
+<testsuite timestamp="2026-01-11T12:46:17" hostname="ubuntu22" package="timer_vhdl" id="0" name="default" tests="5" errors="0" failures="2" time="0" skipped="4">
 <properties>
 <property name="os" value="Linux"/>
 <property name="expect" value="PASS"/>
-<property name="status" value="PASS"/>
+<property name="status" value="FAIL"/>
 </properties>
 <testcase classname="default" name="build execution" time="0">
+<failure type="FAIL" message="Task returned status FAIL." />
 </testcase>
 <testcase classname="default" name="Property COVER i_timer.assert_done_timing.cover in timer_wrapper/dut" time="0" type="COVER" location="" id="i_timer.assert_done_timing.cover">
 <skipped />
@@ -14,132 +15,48 @@
 <testcase classname="default" name="Property COVER i_timer.assert_stable_idle.cover in timer_wrapper/dut" time="0" type="COVER" location="" id="i_timer.assert_stable_idle.cover">
 <skipped />
 </testcase>
+<testcase classname="default" name="Property ASSERT :164 in timer_wrapper/dut" time="0" type="ASSERT" location="" id=":164" tracefile="engine_0/trace.vcd">
+<failure type="ASSERT" message="Property ASSERT :164 in timer_wrapper/dut failed. Trace file: engine_0/trace.vcd" />
+</testcase>
 <testcase classname="default" name="Property ASSERT i_timer.assert_done_timing in timer_wrapper/dut" time="0" type="ASSERT" location="" id="i_timer.assert_done_timing">
+<skipped />
 </testcase>
 <testcase classname="default" name="Property ASSERT i_timer.assert_stable_idle in timer_wrapper/dut" time="0" type="ASSERT" location="" id="i_timer.assert_stable_idle">
+<skipped />
 </testcase>
-<system-out>SBY  2:33:27 [src/timer_vhdl] Removing directory '/home/linuxos/Documents/cern_application/parametric-timer-vhdl/src/timer_vhdl'.
-SBY  2:33:27 [src/timer_vhdl] Copy '/home/linuxos/Documents/cern_application/parametric-timer-vhdl/src/timer.vhd' to '/home/linuxos/Documents/cern_application/parametric-timer-vhdl/src/timer_vhdl/src/timer.vhd'.
-SBY  2:33:27 [src/timer_vhdl] Copy '/home/linuxos/Documents/cern_application/parametric-timer-vhdl/src/timer_wrapper.vhd' to '/home/linuxos/Documents/cern_application/parametric-timer-vhdl/src/timer_vhdl/src/timer_wrapper.vhd'.
-SBY  2:33:27 [src/timer_vhdl] Copy '/home/linuxos/Documents/cern_application/parametric-timer-vhdl/src/timer.psl' to '/home/linuxos/Documents/cern_application/parametric-timer-vhdl/src/timer_vhdl/src/timer.psl'.
-SBY  2:33:27 [src/timer_vhdl] engine_0: smtbmc
-SBY  2:33:27 [src/timer_vhdl] base: starting process &quot;cd src/timer_vhdl/src; yosys -ql ../model/design.log ../model/design.ys&quot;
-SBY  2:33:27 [src/timer_vhdl] base: timer.vhd:90:5:(assert note): delay_cycles_c = 5
-SBY  2:33:27 [src/timer_vhdl] base: finished (returncode=0)
-SBY  2:33:27 [src/timer_vhdl] prep: starting process &quot;cd src/timer_vhdl/model; yosys -ql design_prep.log design_prep.ys&quot;
-SBY  2:33:27 [src/timer_vhdl] prep: finished (returncode=0)
-SBY  2:33:27 [src/timer_vhdl] smt2: starting process &quot;cd src/timer_vhdl/model; yosys -ql design_smt2.log design_smt2.ys&quot;
-SBY  2:33:27 [src/timer_vhdl] smt2: finished (returncode=0)
-SBY  2:33:27 [src/timer_vhdl] engine_0: starting process &quot;cd src/timer_vhdl; yosys-smtbmc --presat --unroll --noprogress -t 50  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2&quot;
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Solver: yices
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 0..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 0..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 1..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 1..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 2..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 2..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 3..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 3..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 4..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 4..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 5..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 5..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 6..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 6..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 7..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 7..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 8..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 8..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 9..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 9..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 10..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 10..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 11..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 11..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 12..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 12..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 13..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 13..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 14..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 14..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 15..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 15..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 16..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 16..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 17..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 17..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 18..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 18..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 19..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 19..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 20..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 20..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 21..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 21..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 22..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 22..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 23..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 23..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 24..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 24..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 25..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 25..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 26..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 26..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 27..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 27..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 28..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 28..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 29..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 29..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 30..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 30..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 31..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 31..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 32..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 32..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 33..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 33..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 34..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 34..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 35..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 35..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 36..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 36..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 37..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 37..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 38..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 38..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 39..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 39..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 40..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 40..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 41..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 41..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 42..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 42..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 43..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 43..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 44..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 44..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 45..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 45..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 46..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 46..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 47..
-SBY  2:33:27 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 47..
-SBY  2:33:28 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 48..
-SBY  2:33:28 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 48..
-SBY  2:33:28 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 49..
-SBY  2:33:28 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 49..
-SBY  2:33:28 [src/timer_vhdl] engine_0: ##   0:00:00  Status: passed
-SBY  2:33:28 [src/timer_vhdl] engine_0: finished (returncode=0)
-SBY  2:33:28 [src/timer_vhdl] engine_0: Status returned by engine: pass
-SBY  2:33:28 [src/timer_vhdl] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
-SBY  2:33:28 [src/timer_vhdl] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
-SBY  2:33:28 [src/timer_vhdl] summary: engine_0 (smtbmc) returned pass
-SBY  2:33:28 [src/timer_vhdl] summary: engine_0 did not produce any traces
-SBY  2:33:28 [src/timer_vhdl] DONE (PASS, rc=0)
+<system-out>SBY 12:46:17 [src/timer_vhdl] Removing directory '/home/linuxos/Documents/cern_application/parametric-timer-vhdl/src/timer_vhdl'.
+SBY 12:46:17 [src/timer_vhdl] Copy '/home/linuxos/Documents/cern_application/parametric-timer-vhdl/src/timer.vhd' to '/home/linuxos/Documents/cern_application/parametric-timer-vhdl/src/timer_vhdl/src/timer.vhd'.
+SBY 12:46:17 [src/timer_vhdl] Copy '/home/linuxos/Documents/cern_application/parametric-timer-vhdl/src/timer_wrapper.vhd' to '/home/linuxos/Documents/cern_application/parametric-timer-vhdl/src/timer_vhdl/src/timer_wrapper.vhd'.
+SBY 12:46:17 [src/timer_vhdl] Copy '/home/linuxos/Documents/cern_application/parametric-timer-vhdl/src/timer.psl' to '/home/linuxos/Documents/cern_application/parametric-timer-vhdl/src/timer_vhdl/src/timer.psl'.
+SBY 12:46:17 [src/timer_vhdl] engine_0: smtbmc
+SBY 12:46:17 [src/timer_vhdl] base: starting process &quot;cd src/timer_vhdl/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 12:46:17 [src/timer_vhdl] base: timer.vhd:90:5:(assert note): delay_cycles_c = 5
+SBY 12:46:17 [src/timer_vhdl] base: finished (returncode=0)
+SBY 12:46:17 [src/timer_vhdl] prep: starting process &quot;cd src/timer_vhdl/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY 12:46:17 [src/timer_vhdl] prep: finished (returncode=0)
+SBY 12:46:17 [src/timer_vhdl] smt2: starting process &quot;cd src/timer_vhdl/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY 12:46:17 [src/timer_vhdl] smt2: finished (returncode=0)
+SBY 12:46:17 [src/timer_vhdl] engine_0: starting process &quot;cd src/timer_vhdl; yosys-smtbmc --presat --unroll --noprogress -t 50  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2&quot;
+SBY 12:46:17 [src/timer_vhdl] engine_0: ##   0:00:00  Solver: yices
+SBY 12:46:17 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY 12:46:17 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY 12:46:17 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY 12:46:17 [src/timer_vhdl] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY 12:46:17 [src/timer_vhdl] engine_0: ##   0:00:00  BMC failed!
+SBY 12:46:17 [src/timer_vhdl] engine_0: ##   0:00:00  Assert failed in timer_wrapper.dut: :164
+SBY 12:46:17 [src/timer_vhdl] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace.vcd
+SBY 12:46:17 [src/timer_vhdl] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace_tb.v
+SBY 12:46:17 [src/timer_vhdl] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace.smtc
+SBY 12:46:17 [src/timer_vhdl] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace.yw
+SBY 12:46:17 [src/timer_vhdl] engine_0: ##   0:00:00  Status: failed
+SBY 12:46:17 [src/timer_vhdl] engine_0: finished (returncode=1)
+SBY 12:46:17 [src/timer_vhdl] engine_0: Status returned by engine: FAIL
+SBY 12:46:17 [src/timer_vhdl] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 12:46:17 [src/timer_vhdl] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 12:46:17 [src/timer_vhdl] summary: engine_0 (smtbmc) returned FAIL
+SBY 12:46:17 [src/timer_vhdl] summary: counterexample trace: src/timer_vhdl/engine_0/trace.vcd
+SBY 12:46:17 [src/timer_vhdl] summary:   failed assertion timer_wrapper.dut.\:164 at  step 1
+SBY 12:46:17 [src/timer_vhdl] DONE (FAIL, rc=2)
 </system-out>
 <system-err>
 </system-err>

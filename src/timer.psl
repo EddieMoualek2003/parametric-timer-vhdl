@@ -36,5 +36,5 @@ vunit i_timer (timer(rtl)) {
     ----------------------------------
     -- UNCOMMENT the line below to prove the PSL is active.
     -- This SHOULD FAIL because reset will eventually be '0'.
-    -- assert always (arst_i = '1');
+    assert always (arst_i = '1');
 }

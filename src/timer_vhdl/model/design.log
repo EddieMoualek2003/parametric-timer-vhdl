@@ -59,7 +59,7 @@ Cleaned up 0 empty switches.
 
 2.2.12. Executing OPT_EXPR pass (perform const folding).
 Optimizing module timer_Brtl_100000000_50000000.
-<suppressed ~4 debug messages>
+<suppressed ~5 debug messages>
 Optimizing module timer_wrapper.
 
 2.3. Executing FUTURE pass.
@@ -71,8 +71,8 @@ Optimizing module timer_wrapper.
 2.5. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \timer_Brtl_100000000_50000000..
 Finding unused cells or wires in module \timer_wrapper..
-Removed 1 unused cells and 7 unused wires.
-<suppressed ~3 debug messages>
+Removed 2 unused cells and 9 unused wires.
+<suppressed ~4 debug messages>
 
 2.6. Executing CHECK pass (checking for obvious problems).
 Checking module timer_Brtl_100000000_50000000...
@@ -87,13 +87,13 @@ Optimizing module timer_wrapper.
 
 2.7.2. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\timer_Brtl_100000000_50000000'.
-Computing hashes of 73 cells of `\timer_Brtl_100000000_50000000'.
+Computing hashes of 74 cells of `\timer_Brtl_100000000_50000000'.
 Finding duplicate cells in `\timer_Brtl_100000000_50000000'.
-Computing hashes of 58 cells of `\timer_Brtl_100000000_50000000'.
+Computing hashes of 59 cells of `\timer_Brtl_100000000_50000000'.
+Finding duplicate cells in `\timer_Brtl_100000000_50000000'.
+Computing hashes of 56 cells of `\timer_Brtl_100000000_50000000'.
 Finding duplicate cells in `\timer_Brtl_100000000_50000000'.
 Computing hashes of 55 cells of `\timer_Brtl_100000000_50000000'.
-Finding duplicate cells in `\timer_Brtl_100000000_50000000'.
-Computing hashes of 54 cells of `\timer_Brtl_100000000_50000000'.
 Finding duplicate cells in `\timer_Brtl_100000000_50000000'.
 <suppressed ~56 debug messages>
 Finding identical cells in module `\timer_wrapper'.
@@ -119,7 +119,7 @@ Performed a total of 0 changes.
 
 2.7.5. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\timer_Brtl_100000000_50000000'.
-Computing hashes of 54 cells of `\timer_Brtl_100000000_50000000'.
+Computing hashes of 55 cells of `\timer_Brtl_100000000_50000000'.
 Finding duplicate cells in `\timer_Brtl_100000000_50000000'.
 Finding identical cells in module `\timer_wrapper'.
 Computing hashes of 1 cells of `\timer_wrapper'.
@@ -156,7 +156,7 @@ Performed a total of 0 changes.
 
 2.7.11. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\timer_Brtl_100000000_50000000'.
-Computing hashes of 54 cells of `\timer_Brtl_100000000_50000000'.
+Computing hashes of 55 cells of `\timer_Brtl_100000000_50000000'.
 Finding duplicate cells in `\timer_Brtl_100000000_50000000'.
 Finding identical cells in module `\timer_wrapper'.
 Computing hashes of 1 cells of `\timer_wrapper'.
@@ -202,7 +202,7 @@ Optimizing module timer_wrapper.
 
 2.11.2. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\timer_Brtl_100000000_50000000'.
-Computing hashes of 54 cells of `\timer_Brtl_100000000_50000000'.
+Computing hashes of 55 cells of `\timer_Brtl_100000000_50000000'.
 Finding duplicate cells in `\timer_Brtl_100000000_50000000'.
 Finding identical cells in module `\timer_wrapper'.
 Computing hashes of 1 cells of `\timer_wrapper'.
@@ -227,10 +227,10 @@ Finding unused cells or wires in module \timer_wrapper..
        37 public wire bits
         4 ports
         4 port bits
-       54 cells
+       55 cells
         1   $add
        15   $and
-        2   $assert
+        3   $assert
         2   $assume
         2   $cover
        10   $dff
@@ -257,8 +257,8 @@ Finding unused cells or wires in module \timer_wrapper..
 
         +----------Count including submodules.
         | 
-       54 timer_wrapper
-       54 timer_Brtl_100000000_50000000
+       55 timer_wrapper
+       55 timer_Brtl_100000000_50000000
 
         +----------Count including submodules.
         | 
@@ -271,10 +271,10 @@ Finding unused cells or wires in module \timer_wrapper..
         - memories
         - memory bits
         - processes
-       54 cells
+       55 cells
         1   $add
        15   $and
-        2   $assert
+        3   $assert
         2   $assume
         2   $cover
        10   $dff
@@ -310,6 +310,6 @@ Module timer_wrapper directly or indirectly contains formal properties -> settin
 5. Executing RTLIL backend.
 Output filename: ../model/design.il
 
-End of script. Logfile hash: 4a3df9672b, CPU: user 0.04s system 0.01s, MEM: 23.27 MB peak
+End of script. Logfile hash: b0436726d5, CPU: user 0.04s system 0.04s, MEM: 21.91 MB peak
 Yosys 0.60+95 (git sha1 991e70489, clang++ 18.1.8 -fPIC -O3)
-Time spent: 61% 1x ghdl (0 sec), 8% 1x plugin (0 sec), ...
+Time spent: 44% 1x ghdl (0 sec), 20% 1x plugin (0 sec), ...
