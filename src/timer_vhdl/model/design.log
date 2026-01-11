@@ -87,19 +87,19 @@ Optimizing module timer_wrapper.
 
 2.7.2. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\timer_Brtl_100000000_50000000'.
-Computing hashes of 74 cells of `\timer_Brtl_100000000_50000000'.
+Computing hashes of 92 cells of `\timer_Brtl_100000000_50000000'.
 Finding duplicate cells in `\timer_Brtl_100000000_50000000'.
-Computing hashes of 59 cells of `\timer_Brtl_100000000_50000000'.
+Computing hashes of 73 cells of `\timer_Brtl_100000000_50000000'.
 Finding duplicate cells in `\timer_Brtl_100000000_50000000'.
-Computing hashes of 56 cells of `\timer_Brtl_100000000_50000000'.
+Computing hashes of 68 cells of `\timer_Brtl_100000000_50000000'.
 Finding duplicate cells in `\timer_Brtl_100000000_50000000'.
-Computing hashes of 55 cells of `\timer_Brtl_100000000_50000000'.
+Computing hashes of 67 cells of `\timer_Brtl_100000000_50000000'.
 Finding duplicate cells in `\timer_Brtl_100000000_50000000'.
-<suppressed ~56 debug messages>
+<suppressed ~74 debug messages>
 Finding identical cells in module `\timer_wrapper'.
 Computing hashes of 1 cells of `\timer_wrapper'.
 Finding duplicate cells in `\timer_wrapper'.
-Removed a total of 19 cells.
+Removed a total of 25 cells.
 
 2.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
 Running muxtree optimizer on module \timer_Brtl_100000000_50000000..
@@ -119,7 +119,7 @@ Performed a total of 0 changes.
 
 2.7.5. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\timer_Brtl_100000000_50000000'.
-Computing hashes of 55 cells of `\timer_Brtl_100000000_50000000'.
+Computing hashes of 67 cells of `\timer_Brtl_100000000_50000000'.
 Finding duplicate cells in `\timer_Brtl_100000000_50000000'.
 Finding identical cells in module `\timer_wrapper'.
 Computing hashes of 1 cells of `\timer_wrapper'.
@@ -129,7 +129,7 @@ Removed a total of 0 cells.
 2.7.6. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \timer_Brtl_100000000_50000000..
 Finding unused cells or wires in module \timer_wrapper..
-Removed 0 unused cells and 18 unused wires.
+Removed 0 unused cells and 24 unused wires.
 <suppressed ~1 debug messages>
 
 2.7.7. Executing OPT_EXPR pass (perform const folding).
@@ -156,7 +156,7 @@ Performed a total of 0 changes.
 
 2.7.11. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\timer_Brtl_100000000_50000000'.
-Computing hashes of 55 cells of `\timer_Brtl_100000000_50000000'.
+Computing hashes of 67 cells of `\timer_Brtl_100000000_50000000'.
 Finding duplicate cells in `\timer_Brtl_100000000_50000000'.
 Finding identical cells in module `\timer_wrapper'.
 Computing hashes of 1 cells of `\timer_wrapper'.
@@ -181,10 +181,10 @@ Removed top 1 bits (of 32) from port Y of cell timer_Brtl_100000000_50000000.:21
 Removed top 1 bits (of 2) from port B of cell timer_Brtl_100000000_50000000.:29 ($eq).
 Removed top 1 bits (of 2) from FF cell timer_Brtl_100000000_50000000.:55 ($dff).
 Removed top 1 bits (of 4) from FF cell timer_Brtl_100000000_50000000.:86 ($dff).
-Removed top 1 bits (of 8) from FF cell timer_Brtl_100000000_50000000.:108 ($dff).
+Removed top 1 bits (of 4) from FF cell timer_Brtl_100000000_50000000.:108 ($dff).
+Removed top 1 bits (of 8) from FF cell timer_Brtl_100000000_50000000.:141 ($dff).
 Removed top 1 bits (of 3) from FF cell timer_Brtl_100000000_50000000.:86 ($dff).
 Removed top 1 bits (of 32) from wire timer_Brtl_100000000_50000000.$auto$ghdl.cc:825:import_module$6.
-Removed top 15 bits (of 31) from wire timer_Brtl_100000000_50000000.$auto$ghdl.cc:825:import_module$8.
 
 2.9. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \timer_Brtl_100000000_50000000..
@@ -202,7 +202,7 @@ Optimizing module timer_wrapper.
 
 2.11.2. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\timer_Brtl_100000000_50000000'.
-Computing hashes of 55 cells of `\timer_Brtl_100000000_50000000'.
+Computing hashes of 67 cells of `\timer_Brtl_100000000_50000000'.
 Finding duplicate cells in `\timer_Brtl_100000000_50000000'.
 Finding identical cells in module `\timer_wrapper'.
 Computing hashes of 1 cells of `\timer_wrapper'.
@@ -221,23 +221,23 @@ Finding unused cells or wires in module \timer_wrapper..
 
         +----------Local Count, excluding submodules.
         | 
-       52 wires
-      234 wire bits
+       62 wires
+      232 wire bits
         6 public wires
        37 public wire bits
         4 ports
         4 port bits
-       55 cells
+       67 cells
         1   $add
-       15   $and
+       20   $and
         3   $assert
         2   $assume
-        2   $cover
-       10   $dff
+        3   $cover
+       15   $dff
         3   $eq
         1   $logic_not
         9   $mux
-        6   $not
+        7   $not
         3   $pmux
 
 === timer_wrapper ===
@@ -257,13 +257,13 @@ Finding unused cells or wires in module \timer_wrapper..
 
         +----------Count including submodules.
         | 
-       55 timer_wrapper
-       55 timer_Brtl_100000000_50000000
+       67 timer_wrapper
+       67 timer_Brtl_100000000_50000000
 
         +----------Count including submodules.
         | 
-       56 wires
-      238 wire bits
+       66 wires
+      236 wire bits
        10 public wires
        41 public wire bits
         8 ports
@@ -271,17 +271,17 @@ Finding unused cells or wires in module \timer_wrapper..
         - memories
         - memory bits
         - processes
-       55 cells
+       67 cells
         1   $add
-       15   $and
+       20   $and
         3   $assert
         2   $assume
-        2   $cover
-       10   $dff
+        3   $cover
+       15   $dff
         3   $eq
         1   $logic_not
         9   $mux
-        6   $not
+        7   $not
         3   $pmux
         1 submodules
         1   timer_Brtl_100000000_50000000
@@ -310,6 +310,6 @@ Module timer_wrapper directly or indirectly contains formal properties -> settin
 5. Executing RTLIL backend.
 Output filename: ../model/design.il
 
-End of script. Logfile hash: b0436726d5, CPU: user 0.04s system 0.04s, MEM: 21.91 MB peak
+End of script. Logfile hash: 2291e9d297, CPU: user 0.03s system 0.01s, MEM: 22.52 MB peak
 Yosys 0.60+95 (git sha1 991e70489, clang++ 18.1.8 -fPIC -O3)
-Time spent: 44% 1x ghdl (0 sec), 20% 1x plugin (0 sec), ...
+Time spent: 69% 1x ghdl (0 sec), 8% 1x plugin (0 sec), ...

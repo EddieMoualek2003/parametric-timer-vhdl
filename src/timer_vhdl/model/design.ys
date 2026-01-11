@@ -1,6 +1,6 @@
 # running in src/timer_vhdl/src/
 plugin -i ghdl
-# Analyze both files, elaborate the wrapper
+# Analyze all 3 files, elaborate the wrapper
 ghdl --std=08 timer.vhd timer.psl timer_wrapper.vhd -e timer_wrapper
 prep -top timer_wrapper
 

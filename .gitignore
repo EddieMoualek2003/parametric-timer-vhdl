@@ -1,0 +1,4 @@
+# GHDL / simulation artifacts
+*.ghw
+*.cf
+*.o

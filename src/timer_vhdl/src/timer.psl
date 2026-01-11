@@ -20,6 +20,12 @@ vunit i_timer (timer(rtl)) {
         (done_o = '1' and start_i = '0' and arst_i = '0') -> next (done_o = '1')
     );
 
+    assert_timer_start: assert always (
+        (prev(start_i = '1') and prev(done_o = '1') and arst_i = '0' and done_o = '0')
+        -> next(done_o = '0')
+    );
+
+    
     assert_done_timing: assert always (
         -- Trigger: Start is requested while we are Idle
         (prev(start_i = '1') and prev(done_o = '1')and arst_i = '0' and done_o = '0')
@@ -32,9 +38,9 @@ vunit i_timer (timer(rtl)) {
     );
 
     ----------------------------------
-    -- DEBUG / SANITY CHECK
+    -- DEBUG CHECK - Verifies formal is actually running
     ----------------------------------
     -- UNCOMMENT the line below to prove the PSL is active.
     -- This SHOULD FAIL because reset will eventually be '0'.
-    assert always (arst_i = '1');
+    -- assert always (arst_i = '1');
 }

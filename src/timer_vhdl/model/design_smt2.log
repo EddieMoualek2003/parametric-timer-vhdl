@@ -35,24 +35,24 @@ Module timer_wrapper directly or indirectly contains formal properties -> settin
 
         +----------Local Count, excluding submodules.
         | 
-       56 wires
-      269 wire bits
-       13 public wires
-       75 public wire bits
+       66 wires
+      267 wire bits
+       17 public wires
+       79 public wire bits
         4 ports
         4 port bits
-       58 cells
+       69 cells
         1   $add
-       15   $and
-        5   $anyinit
+       20   $and
+        9   $anyinit
         3   $anyseq
         3   $assert
         3   $assume
         3   $eq
-        5   $ff
+        6   $ff
         1   $logic_not
         9   $mux
-        7   $not
+        8   $not
         3   $pmux
 
 === timer_wrapper ===
@@ -75,32 +75,32 @@ Module timer_wrapper directly or indirectly contains formal properties -> settin
 
         +----------Count including submodules.
         | 
-       60 timer_wrapper
-       58 timer_Brtl_100000000_50000000
+       71 timer_wrapper
+       69 timer_Brtl_100000000_50000000
 
         +----------Count including submodules.
         | 
-       61 wires
-      274 wire bits
-       17 public wires
-       79 public wire bits
+       71 wires
+      272 wire bits
+       21 public wires
+       83 public wire bits
         8 ports
         8 port bits
         - memories
         - memory bits
         - processes
-       60 cells
+       71 cells
         1   $add
-       15   $and
-        5   $anyinit
+       20   $and
+        9   $anyinit
         3   $anyseq
         3   $assert
         4   $assume
         3   $eq
-        5   $ff
+        6   $ff
         1   $logic_not
         9   $mux
-        8   $not
+        9   $not
         3   $pmux
         1 submodules
         1   timer_Brtl_100000000_50000000
@@ -113,6 +113,6 @@ Module timer_wrapper directly or indirectly contains formal properties -> settin
 Creating SMT-LIBv2 representation of module timer_Brtl_100000000_50000000.
 Creating SMT-LIBv2 representation of module timer_wrapper.
 
-End of script. Logfile hash: 5aa75106df, CPU: user 0.01s system 0.01s, MEM: 14.74 MB peak
+End of script. Logfile hash: cdd59833ab, CPU: user 0.01s system 0.00s, MEM: 14.76 MB peak
 Yosys 0.60+95 (git sha1 991e70489, clang++ 18.1.8 -fPIC -O3)
-Time spent: 61% 2x write_smt2 (0 sec), 21% 2x read_rtlil (0 sec), ...
+Time spent: 68% 2x write_smt2 (0 sec), 18% 2x read_rtlil (0 sec), ...
