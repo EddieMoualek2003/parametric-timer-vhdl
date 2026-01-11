@@ -310,6 +310,6 @@ Module timer_wrapper directly or indirectly contains formal properties -> settin
 5. Executing RTLIL backend.
 Output filename: ../model/design.il
 
-End of script. Logfile hash: 4a3df9672b, CPU: user 0.04s system 0.00s, MEM: 23.15 MB peak
+End of script. Logfile hash: 4a3df9672b, CPU: user 0.04s system 0.01s, MEM: 23.27 MB peak
 Yosys 0.60+95 (git sha1 991e70489, clang++ 18.1.8 -fPIC -O3)
-Time spent: 62% 1x ghdl (0 sec), 10% 6x opt_expr (0 sec), ...
+Time spent: 61% 1x ghdl (0 sec), 8% 1x plugin (0 sec), ...

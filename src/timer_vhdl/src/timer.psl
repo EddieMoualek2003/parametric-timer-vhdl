@@ -24,7 +24,7 @@ vunit i_timer (timer(rtl)) {
         -- Trigger: Start is requested while we are Idle
         (prev(start_i = '1') and prev(done_o = '1')and arst_i = '0' and done_o = '0')
         
-        -- Result: Done goes high exactly 6 cycles later
+        -- Result: Done goes high exactly 5 cycles later based on the specified testbench
         -> next[5] (done_o = '1')
         
         -- Critical: Stop checking if reset is pressed during the wait
@@ -36,13 +36,5 @@ vunit i_timer (timer(rtl)) {
     ----------------------------------
     -- UNCOMMENT the line below to prove the PSL is active.
     -- This SHOULD FAIL because reset will eventually be '0'.
-    -- sanity_check:
     -- assert always (arst_i = '1');
-
-    ----------------------------------
-    -- FUNCTIONAL ASSERTIONS
-    ----------------------------------
-    -- Example: When done_o is High, it means we finished or are idle
-    -- (You will likely need to refine this logic)
-    
 }

@@ -1,0 +1,23 @@
+name: Formal Verification (OSS CAD Suite)
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  formal:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up OSS CAD Suite
+        uses: YosysHQ/setup-oss-cad-suite@v1
+        with:
+          oss-cad-suite-version: latest
+
+      - name: Run SymbiYosys formal verification
+        run: |
+          cd src
+          sby -f timer_vhdl.sby
