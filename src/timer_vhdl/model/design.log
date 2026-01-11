@@ -1,0 +1,315 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2025  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.60+95 (git sha1 991e70489, clang++ 18.1.8 -fPIC -O3)
+
+-- Executing script file `../model/design.ys' --
+
+1. Executing GHDL.
+Importing module timer_wrapper.
+Importing module timer_Brtl_100000000_50000000.
+
+2. Executing PREP pass.
+
+2.1. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1.1. Analyzing design hierarchy..
+Top module:  \timer_wrapper
+Used module:     \timer_Brtl_100000000_50000000
+
+2.1.2. Analyzing design hierarchy..
+Top module:  \timer_wrapper
+Used module:     \timer_Brtl_100000000_50000000
+Removed 0 unused modules.
+Module timer_Brtl_100000000_50000000 directly or indirectly contains formal properties -> setting "keep" attribute.
+Module timer_wrapper directly or indirectly contains formal properties -> setting "keep" attribute.
+
+2.2. Executing PROC pass (convert processes to netlists).
+
+2.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+2.2.4. Executing PROC_INIT pass (extract init attributes).
+
+2.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+2.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+2.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+2.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+2.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module timer_Brtl_100000000_50000000.
+<suppressed ~4 debug messages>
+Optimizing module timer_wrapper.
+
+2.3. Executing FUTURE pass.
+
+2.4. Executing OPT_EXPR pass (perform const folding).
+Optimizing module timer_Brtl_100000000_50000000.
+Optimizing module timer_wrapper.
+
+2.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \timer_Brtl_100000000_50000000..
+Finding unused cells or wires in module \timer_wrapper..
+Removed 1 unused cells and 7 unused wires.
+<suppressed ~3 debug messages>
+
+2.6. Executing CHECK pass (checking for obvious problems).
+Checking module timer_Brtl_100000000_50000000...
+Checking module timer_wrapper...
+Found and reported 0 problems.
+
+2.7. Executing OPT pass (performing simple optimizations).
+
+2.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module timer_Brtl_100000000_50000000.
+Optimizing module timer_wrapper.
+
+2.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\timer_Brtl_100000000_50000000'.
+Computing hashes of 73 cells of `\timer_Brtl_100000000_50000000'.
+Finding duplicate cells in `\timer_Brtl_100000000_50000000'.
+Computing hashes of 58 cells of `\timer_Brtl_100000000_50000000'.
+Finding duplicate cells in `\timer_Brtl_100000000_50000000'.
+Computing hashes of 55 cells of `\timer_Brtl_100000000_50000000'.
+Finding duplicate cells in `\timer_Brtl_100000000_50000000'.
+Computing hashes of 54 cells of `\timer_Brtl_100000000_50000000'.
+Finding duplicate cells in `\timer_Brtl_100000000_50000000'.
+<suppressed ~56 debug messages>
+Finding identical cells in module `\timer_wrapper'.
+Computing hashes of 1 cells of `\timer_wrapper'.
+Finding duplicate cells in `\timer_wrapper'.
+Removed a total of 19 cells.
+
+2.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \timer_Brtl_100000000_50000000..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \timer_wrapper..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~15 debug messages>
+
+2.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \timer_Brtl_100000000_50000000.
+  Optimizing cells in module \timer_wrapper.
+Performed a total of 0 changes.
+
+2.7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\timer_Brtl_100000000_50000000'.
+Computing hashes of 54 cells of `\timer_Brtl_100000000_50000000'.
+Finding duplicate cells in `\timer_Brtl_100000000_50000000'.
+Finding identical cells in module `\timer_wrapper'.
+Computing hashes of 1 cells of `\timer_wrapper'.
+Finding duplicate cells in `\timer_wrapper'.
+Removed a total of 0 cells.
+
+2.7.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \timer_Brtl_100000000_50000000..
+Finding unused cells or wires in module \timer_wrapper..
+Removed 0 unused cells and 18 unused wires.
+<suppressed ~1 debug messages>
+
+2.7.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module timer_Brtl_100000000_50000000.
+Optimizing module timer_wrapper.
+
+2.7.8. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.7.9. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \timer_Brtl_100000000_50000000..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \timer_wrapper..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~15 debug messages>
+
+2.7.10. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \timer_Brtl_100000000_50000000.
+  Optimizing cells in module \timer_wrapper.
+Performed a total of 0 changes.
+
+2.7.11. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\timer_Brtl_100000000_50000000'.
+Computing hashes of 54 cells of `\timer_Brtl_100000000_50000000'.
+Finding duplicate cells in `\timer_Brtl_100000000_50000000'.
+Finding identical cells in module `\timer_wrapper'.
+Computing hashes of 1 cells of `\timer_wrapper'.
+Finding duplicate cells in `\timer_wrapper'.
+Removed a total of 0 cells.
+
+2.7.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \timer_Brtl_100000000_50000000..
+Finding unused cells or wires in module \timer_wrapper..
+
+2.7.13. Executing OPT_EXPR pass (perform const folding).
+Optimizing module timer_Brtl_100000000_50000000.
+Optimizing module timer_wrapper.
+
+2.7.14. Finished fast OPT passes. (There is nothing left to do.)
+
+2.8. Executing WREDUCE pass (reducing word size of cells).
+Removed top 28 bits (of 31) from port B of cell timer_Brtl_100000000_50000000.:18 ($eq).
+Removed top 1 bits (of 32) from port A of cell timer_Brtl_100000000_50000000.:21 ($add).
+Removed top 31 bits (of 32) from port B of cell timer_Brtl_100000000_50000000.:21 ($add).
+Removed top 1 bits (of 32) from port Y of cell timer_Brtl_100000000_50000000.:21 ($add).
+Removed top 1 bits (of 2) from port B of cell timer_Brtl_100000000_50000000.:29 ($eq).
+Removed top 1 bits (of 2) from FF cell timer_Brtl_100000000_50000000.:55 ($dff).
+Removed top 1 bits (of 4) from FF cell timer_Brtl_100000000_50000000.:86 ($dff).
+Removed top 1 bits (of 8) from FF cell timer_Brtl_100000000_50000000.:108 ($dff).
+Removed top 1 bits (of 3) from FF cell timer_Brtl_100000000_50000000.:86 ($dff).
+Removed top 1 bits (of 32) from wire timer_Brtl_100000000_50000000.$auto$ghdl.cc:825:import_module$6.
+Removed top 15 bits (of 31) from wire timer_Brtl_100000000_50000000.$auto$ghdl.cc:825:import_module$8.
+
+2.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \timer_Brtl_100000000_50000000..
+Finding unused cells or wires in module \timer_wrapper..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+2.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.11. Executing OPT pass (performing simple optimizations).
+
+2.11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module timer_Brtl_100000000_50000000.
+Optimizing module timer_wrapper.
+
+2.11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\timer_Brtl_100000000_50000000'.
+Computing hashes of 54 cells of `\timer_Brtl_100000000_50000000'.
+Finding duplicate cells in `\timer_Brtl_100000000_50000000'.
+Finding identical cells in module `\timer_wrapper'.
+Computing hashes of 1 cells of `\timer_wrapper'.
+Finding duplicate cells in `\timer_wrapper'.
+Removed a total of 0 cells.
+
+2.11.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \timer_Brtl_100000000_50000000..
+Finding unused cells or wires in module \timer_wrapper..
+
+2.11.4. Finished fast OPT passes.
+
+2.12. Printing statistics.
+
+=== timer_Brtl_100000000_50000000 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       52 wires
+      234 wire bits
+        6 public wires
+       37 public wire bits
+        4 ports
+        4 port bits
+       54 cells
+        1   $add
+       15   $and
+        2   $assert
+        2   $assume
+        2   $cover
+       10   $dff
+        3   $eq
+        1   $logic_not
+        9   $mux
+        6   $not
+        3   $pmux
+
+=== timer_wrapper ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        4 wires
+        4 wire bits
+        4 public wires
+        4 public wire bits
+        4 ports
+        4 port bits
+        1 submodules
+        1   timer_Brtl_100000000_50000000
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+       54 timer_wrapper
+       54 timer_Brtl_100000000_50000000
+
+        +----------Count including submodules.
+        | 
+       56 wires
+      238 wire bits
+       10 public wires
+       41 public wire bits
+        8 ports
+        8 port bits
+        - memories
+        - memory bits
+        - processes
+       54 cells
+        1   $add
+       15   $and
+        2   $assert
+        2   $assume
+        2   $cover
+       10   $dff
+        3   $eq
+        1   $logic_not
+        9   $mux
+        6   $not
+        3   $pmux
+        1 submodules
+        1   timer_Brtl_100000000_50000000
+
+2.13. Executing CHECK pass (checking for obvious problems).
+Checking module timer_Brtl_100000000_50000000...
+Checking module timer_wrapper...
+Found and reported 0 problems.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `timer_wrapper'. Setting top module to timer_wrapper.
+
+3.1. Analyzing design hierarchy..
+Top module:  \timer_wrapper
+Used module:     \timer_Brtl_100000000_50000000
+
+3.2. Analyzing design hierarchy..
+Top module:  \timer_wrapper
+Used module:     \timer_Brtl_100000000_50000000
+Removed 0 unused modules.
+Module timer_Brtl_100000000_50000000 directly or indirectly contains formal properties -> setting "keep" attribute.
+Module timer_wrapper directly or indirectly contains formal properties -> setting "keep" attribute.
+
+4. Executing jny backend.
+
+5. Executing RTLIL backend.
+Output filename: ../model/design.il
+
+End of script. Logfile hash: 4a3df9672b, CPU: user 0.04s system 0.00s, MEM: 23.15 MB peak
+Yosys 0.60+95 (git sha1 991e70489, clang++ 18.1.8 -fPIC -O3)
+Time spent: 62% 1x ghdl (0 sec), 10% 6x opt_expr (0 sec), ...

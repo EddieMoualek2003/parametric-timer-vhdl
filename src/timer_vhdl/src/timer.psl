@@ -1,0 +1,48 @@
+-- Bind to the correct Entity(Architecture)
+vunit i_timer (timer(rtl)) {
+
+    -- Use the default clock
+    default clock is rising_edge(clk_i);
+
+    ----------------------------------
+    -- ENVIRONMENT ASSUMPTIONS
+    ----------------------------------
+    -- 1. Start in Reset
+    assume_reset_initial : assume { arst_i };
+
+    -- 2. Reset must be released eventually
+    assume_reset_release : assume always eventually! (arst_i = '0');
+
+    -- 3. Start pulse happens eventually (after reset is released)
+    assume_start : assume always eventually! (start_i = '1');
+
+    assert_stable_idle: assert always (
+        (done_o = '1' and start_i = '0' and arst_i = '0') -> next (done_o = '1')
+    );
+
+    assert_done_timing: assert always (
+        -- Trigger: Start is requested while we are Idle
+        (prev(start_i = '1') and prev(done_o = '1')and arst_i = '0' and done_o = '0')
+        
+        -- Result: Done goes high exactly 6 cycles later
+        -> next[5] (done_o = '1')
+        
+        -- Critical: Stop checking if reset is pressed during the wait
+        abort arst_i = '1'
+    );
+
+    ----------------------------------
+    -- DEBUG / SANITY CHECK
+    ----------------------------------
+    -- UNCOMMENT the line below to prove the PSL is active.
+    -- This SHOULD FAIL because reset will eventually be '0'.
+    -- sanity_check:
+    -- assert always (arst_i = '1');
+
+    ----------------------------------
+    -- FUNCTIONAL ASSERTIONS
+    ----------------------------------
+    -- Example: When done_o is High, it means we finished or are idle
+    -- (You will likely need to refine this logic)
+    
+}
