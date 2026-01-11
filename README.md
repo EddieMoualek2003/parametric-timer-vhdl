@@ -80,3 +80,6 @@ Both workflows run automatically on every push and pull request. The CI history 
  - Generated simulation and formal artifacts are excluded via `.gitignore`.
  - The design assumes a valid, non-zero delay configuration.
  - The wrapper exists solely to bind concrete generics for formal verification.
+
+## Tooling and Environment
+Development and verification were performed on Ubuntu 22.04 using standard open-source tools, including GHDL, GTKWave, VUnit, and the OSS CAD Suite. The continuous integration workflows mirror this environment to ensure consistency between local development and automated verification.
