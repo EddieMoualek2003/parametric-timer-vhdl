@@ -17,8 +17,8 @@ architecture tb of tb_timer is
   ---------------------------------------------------------------------------
   -- Test parameters
   ---------------------------------------------------------------------------
-  constant clk_freq_hz_g : natural := 100_000_000; -- 100 MHz
-  constant delay_g       : time    := 30 ns; -- Example test case from document
+  constant clk_freq_hz_g : natural := 100_000_000;  -- 100 MHz
+  constant delay_g       : time    := 100 ns;       -- Example test case from document
   -- This implements the same conversion logic as the timer module - it is repeated here
   -- as part of the verification.
   constant delay_cycles_c : natural :=
@@ -64,7 +64,7 @@ begin
     begin
     test_runner_setup(runner, runner_cfg);
 
-    if run("delay_cycles_calculation") then
+    if run("done_o_self_checking") then
         -- Begin with the reset
         arst_i <= '1';
         start_i <= '0';
@@ -86,18 +86,16 @@ begin
         -- The timer should be running now, check done_o is low.
         check_equal(done_o, '0', "done_o should go low after start"); -- Passed.
 
-        -- Wait expected number of cycles
-        for i in 0 to delay_cycles_c-1 loop
+        -- Wait the remaining delay_cycles_c - 1 clock cycles after initial clock alignment
+        for i in 1 to delay_cycles_c-1 loop
             wait until rising_edge(clk_i);
         end loop;
 
         -- The timer should now be complete, now check done_o is high.
-        wait until rising_edge(clk_i);
         check_equal(done_o, '1', "done_o should go high after delay"); -- Passed.
 
         -- Let the simulation run for some more time to see how the signals evolve.
         wait for 1 us;
-        check_true(true);
     end if;
 
     test_runner_cleanup(runner);

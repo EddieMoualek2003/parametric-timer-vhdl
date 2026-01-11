@@ -5,12 +5,12 @@ use ieee.math_real.all;
 
 entity timer is
   generic (
-    clk_freq_hz_g   : natural;
-    delay_g         : time
+    clk_freq_hz_g   : natural;  -- Input clock frequency in Hz
+    delay_g         : time      -- Requested delay duration
   );
   port (
     clk_i   : in  std_ulogic;
-    arst_i  : in  std_ulogic;
+    arst_i  : in  std_ulogic;   -- Active-high synchronous reset
     start_i : in  std_ulogic;
     done_o  : out std_ulogic
   );
@@ -20,24 +20,29 @@ architecture rtl of timer is
 
   ---------------------------------------------------------------------------
   -- Number of clock cycles corresponding to delay_g.
-  -- Calculated as ceil(delay_g * clk_freq_hz_g).
-  -- This ensures the timer does not expire earlier than the requested delay.
+  -- This is calculated at elaboration time using ceiling to ensure the timer
+  -- never expires earlier than the requested delay.
   ---------------------------------------------------------------------------
-  constant expose_cycles_g : boolean := true;
   constant delay_cycles_c : natural :=
     natural(
       ceil(real(clk_freq_hz_g) * real(delay_g / 1 ns) * 1.0e-9)
     );
-    -- 1 ns is used as the normalisation unit, aligning with the default
-    -- simulation time resolution used by tools such as Vivado xsim.
+    -- 1 ns is used as a normalisation unit, consistent with common
+    -- simulator time resolutions (e.g. Vivado xsim).
 
 
-  -- Register holding the number of elapsed clock cycles
+  ---------------------------------------------------------------------------
+  -- Internal state
+  ---------------------------------------------------------------------------
   signal count_r : natural := 0;
   type state_type is (IDLE, COUNT, DONE);
   signal state : state_type := IDLE;
 
   begin
+
+  ---------------------------------------------------------------------------
+  -- Timer state machine
+  ---------------------------------------------------------------------------
   process (clk_i)
   begin
     if rising_edge(clk_i) then
@@ -45,14 +50,11 @@ architecture rtl of timer is
         state   <= IDLE;
         count_r <= 0;
         done_o  <= '1';
+      
       else
-        -- Default assignments (stay in current state)
-        state  <= state;
-        done_o <= done_o;
-        count_r <= count_r;
-
         case state is
 
+          -- IDLE: Waiting for start request.
           when IDLE =>
             done_o <= '1';
             count_r <= 0;
@@ -61,6 +63,7 @@ architecture rtl of timer is
               done_o <= '0';
             end if;
 
+          -- COUNT: Count clock cycles until delay expires.
           when COUNT =>
             if count_r = delay_cycles_c - 1 then
               state <= DONE;
@@ -69,7 +72,7 @@ architecture rtl of timer is
               count_r <= count_r + 1;
             end if;
             
-
+          -- Done: Wait for start to deassert before re-arming.
           when DONE =>
             if start_i = '0' then
               state <= IDLE;
@@ -79,18 +82,5 @@ architecture rtl of timer is
       end if;
     end if;
   end process;
-
-
-  ---------------------------------------------------------------------------
-  -- Optional Debugging - Verification of delay_cycles_c
-  -- This allows us to check if the computation of the elaboration-time constant is correct.
-  ---------------------------------------------------------------------------
-  debug_gen : if expose_cycles_g generate
-  begin
-    assert false
-      report "delay_cycles_c = " &
-             integer'image(integer(delay_cycles_c))
-      severity note;
-  end generate;
 
 end architecture rtl;
