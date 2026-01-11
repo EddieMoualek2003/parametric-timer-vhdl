@@ -19,5 +19,5 @@ jobs:
 
       - name: Run SymbiYosys formal verification
         run: |
-          cd src
-          sby -f timer_vhdl.sby
+          sby -f src/timer_vhdl.sby
+
